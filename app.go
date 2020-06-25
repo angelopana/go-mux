@@ -9,11 +9,13 @@ import (
 	_ "github.com/lib/pq"
 )
 
+//App the struct of app
 type App struct {
 	Router *mux.Router
 	DB     *sql.DB
 }
 
+//Initialize some thing
 func (a *App) Initialize(user string, password string, dbname string) {
 
 	connectionString := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable", user, password, dbname)
@@ -29,4 +31,5 @@ func (a *App) Initialize(user string, password string, dbname string) {
 
 }
 
+//Run this
 func (a *App) Run(addr string) {}

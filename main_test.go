@@ -9,19 +9,20 @@ import (
 var a App
 
 //Creating a table
-const tableCreationQuery = ` CREATE TABLE IF NOT ECISTS products 
+const tableCreationQuery = `CREATE TABLE IF NOT EXISTS products
 (
-	id SERIAL, 
-	name TEXT NOT NULL,
-	price NUMERIC(10,2) NOT NULL DEFAULT 0.00,
-	CONSTRAINT products_pkey PRIMARY KEY (id)
+    id SERIAL,
+    name TEXT NOT NULL,
+    price NUMERIC(10,2) NOT NULL DEFAULT 0.00,
+    CONSTRAINT products_pkey PRIMARY KEY (id)
 )`
 
 func TestMain(m *testing.M) {
 	a.Initialize(
-		os.Getenv("APP_DB_USERNAME"),
-		os.Getenv("APP_DB_PASSWORD"),
-		os.Getenv("APP_DB_NAME"),
+		//set variables to connect
+		os.Getenv("APP_DB_USERNAME"), //export APP_DB_USERNAME=postgres
+		os.Getenv("APP_DB_PASSWORD"), //export APP_DB_PASSWORD=password1
+		os.Getenv("APP_DB_NAME"),     //export APP_DB_NAME=postgres
 	)
 
 	ensureTableExists()
