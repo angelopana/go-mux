@@ -8,7 +8,7 @@ These are my notes for future me or anyone on how to access the postgres contain
 
 ## Tip to map your postgres docker container to localhost
 
-[Link to Original post](https://stackoverflow.com/questions/37694987/connecting-to-postgresql-in-a-docker-container-from-outside)
+[Link to Original post](https://medium.com/better-programming/connect-from-local-machine-to-postgresql-docker-container-f785f00461a7)
 
 Create your postgres container, you can run Postgres this way (map a port):
 
