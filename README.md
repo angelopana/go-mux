@@ -34,7 +34,7 @@ postgres-# \q
 
 ```
 
-Go to the loclhost and map public-ip to to 5432
+Go to the local terminal and map public-ip to to 5432
 
 ```
 psql -h public-ip-server -p 5432 -U postgres
